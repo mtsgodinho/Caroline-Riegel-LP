@@ -13,6 +13,7 @@
       body {
         font-family: 'Inter', sans-serif;
         scroll-behavior: smooth;
+        -webkit-font-smoothing: antialiased;
       }
       .font-serif {
         font-family: 'Playfair Display', serif;
@@ -36,6 +37,10 @@
         scrollbar-width: none;
       }
     </style>
+    <script>
+      // Previne erros em libs que buscam process.env no navegador
+      window.process = { env: { NODE_ENV: 'production' } };
+    </script>
     <script type="importmap">
 {
   "imports": {
