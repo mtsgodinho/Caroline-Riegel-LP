@@ -86,14 +86,14 @@ const App: React.FC = () => {
 
       {/* 1. HERO (Primeira Dobra) */}
       <section className="relative min-h-[90vh] flex flex-col">
-        {/* Background Overlay - Atualizado para a imagem 2 */}
+        {/* Background Overlay - Atualizado para a IMAGEM 2 conforme solicitado */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img 
             src="https://i.imgur.com/zDRH1ST.png" 
             alt="Dra. Carolina Riegel" 
-            className="w-full h-full object-cover object-top filter brightness-[0.85] contrast-[1.05]"
+            className="w-full h-full object-cover object-top filter brightness-[0.9] contrast-[1.02]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-stone-50 via-stone-50/10 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-stone-50 via-stone-50/20 to-transparent"></div>
         </div>
 
         {/* Content */}
@@ -101,7 +101,7 @@ const App: React.FC = () => {
           <span className="inline-block px-4 py-1.5 bg-emerald-700 text-white text-[10px] uppercase tracking-[0.2em] font-bold rounded-full mb-6 mx-auto">
             Ortodontia Inteligente
           </span>
-          <h1 className="font-serif text-4xl sm:text-5xl leading-[1.1] text-zinc-900 mb-6 font-bold">
+          <h1 className="font-serif text-4xl sm:text-6xl leading-[1.1] text-zinc-900 mb-6 font-bold">
             Eu sou Carolina Riegel e transformo sorrisos com uma ortodontia <span className="text-emerald-800 italic">humana.</span>
           </h1>
           <p className="text-stone-700 text-lg mb-10 max-w-md mx-auto leading-relaxed">
@@ -120,12 +120,12 @@ const App: React.FC = () => {
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-16 items-center">
           <div className="relative w-full md:w-1/2">
             <div className="absolute -top-10 -left-10 w-40 h-40 bg-emerald-50 rounded-full z-0 opacity-50"></div>
+            {/* Atualizado para a IMAGEM 1 conforme solicitado */}
             <img 
               src="https://i.imgur.com/JjcyGuC.png" 
-              alt="Carolina Riegel Atendimento" 
-              className="relative z-10 w-full rounded-[40px] shadow-2xl grayscale-[0.2] border-[12px] border-white"
+              alt="Dra. Carolina Riegel Atendimento" 
+              className="relative z-10 w-full rounded-[40px] shadow-2xl border-[12px] border-white"
             />
-            {/* Bloco de +15 anos removido conforme solicitado */}
           </div>
 
           <div className="w-full md:w-1/2 space-y-8">
@@ -307,10 +307,6 @@ const App: React.FC = () => {
                 </div>
               </div>
             ))}
-            {/* Template for future images */}
-            <div className="flex-shrink-0 w-full sm:w-[450px] snap-center flex items-center justify-center border-4 border-dashed border-stone-100 rounded-[40px] h-[580px] bg-stone-50/50">
-               <p className="text-stone-300 font-serif italic text-xl">Mais sorrisos em breve...</p>
-            </div>
           </div>
         </div>
       </section>
@@ -369,20 +365,21 @@ const App: React.FC = () => {
           <div className="w-full h-px bg-zinc-800"></div>
 
           <p className="text-[10px] opacity-40 uppercase tracking-widest leading-relaxed">
-            © {new Date().getFullYear()} Carolina Riegel. Todos os direitos reservados. CRO/RS XXXX.
+            © {new Date().getFullYear()} Carolina Riegel. Todos os direitos reservados.
             <br />
             Desenvolvido para alta conversão e experiência premium.
           </p>
         </div>
       </footer>
 
-      {/* Floating WhatsApp Button (Sempre Visível) */}
-      <div className="fixed bottom-6 right-6 z-[80]">
+      {/* Floating WhatsApp Button (Canto Inferior Direito) */}
+      <div className="fixed bottom-6 right-6 z-[99]">
         <a 
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl whatsapp-pulse"
+          className="w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl whatsapp-pulse hover:scale-110 transition-transform"
+          aria-label="Falar no WhatsApp"
         >
           <MessageCircle size={32} fill="currentColor" />
         </a>
